@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="2" parallel="tests" name="Suite">
+    <listeners>
+        <listener class-name="com.crowdar.utils.ListenerTest"/>
+    </listeners>
+    <test name="LoginSuccessful" preserve-order="true">
+        <parameter name="browser" value="chrome" />
+        <classes>
+            <class name="com.crowdar.test.session.Login_Successful" />
+            <class name="com.crowdar.test.session.Login_lockedOutUser" />
+            <class name="com.crowdar.test.session.Login_InvalidCredentials" />
+            <class name="com.crowdar.test.session.Login_Failed" />
+        </classes>
+    </test>
+</suite> <!-- Suite -->
